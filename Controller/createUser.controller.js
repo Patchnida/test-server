@@ -9,4 +9,4 @@ const createUser = async (req, res) => {
     }
 }
 
-module.exports = createUser;
+module.exports = { createUser };

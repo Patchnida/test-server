@@ -2,12 +2,13 @@ const mongoose = require('mongoose')
 const express = require('express');
 
 const userRouter = require('./Routers/userRouter')
-app.use(bodyParser.json());
 
+const app = express();
 
 const mongoURI = "mongodb+srv://patchnida2547:patchnida2547@cluster0.qcin6u0.mongodb.net/"
-const app = express();
+
 const port = 8080;
+app.use(express.json());
 
 app.get("/", async (req, res) => {
     res.send({
